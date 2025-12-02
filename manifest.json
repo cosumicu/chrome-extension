@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Reddit Extension 1152",
+  "version": "1.0",
+  "description": "Finds the best time to post on a subreddit.",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://www.reddit.com/*"
+  ]
+}
