@@ -1,0 +1,35 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 300px;
+}
+
+.day {
+  margin-bottom: 5px;
+}
+
+.c-0 {
+  width: 100%;
+  padding: 2%;
+  background-color: pink;
+  display: flex;
+
+  align-items: center;
+  gap: 10px;
+}
+
+.c-0 img {
+  height: 50px;
+  width: 50px;
+}
+
+.c-1 {
+  margin: 2% 5%;
+}
+
+.c-1 > * {
+  margin-top: 2%;
+}
