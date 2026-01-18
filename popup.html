@@ -1,24 +1,45 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/popup.css" />
-    <title>Document</title>
+    <!-- REMOVED: <link rel="stylesheet" href="css/apexcharts.css" /> -->
+    <title>Reddit Post Timing Analyzer</title>
   </head>
   <body>
     <div class="c-0">
-      <img src="" alt="" />
-      <p>Best Time to post on Reddit</p>
+      <h3>Best Time to Post on Reddit</h3>
     </div>
 
     <div class="c-1">
-      <p>Subreddit:</p>
-      <p id="subreddit">Loading...</p>
+      <div class="subreddit-info">
+        <p>Subreddit:</p>
+        <p id="subreddit">Loading...</p>
+      </div>
       <button id="analyzeBtn">Analyze Best Times</button>
-      <p id="results"></p>
+      <div id="loading" class="loading" style="display: none">
+        Analyzing posts...
+      </div>
+      <div id="results"></div>
+      <!-- Heatmap Container -->
+      <div id="heatmap-container" style="display: none">
+        <div id="heatmap-chart"></div>
+        <div class="heatmap-info">
+          <div class="heatmap-legend">
+            <span class="legend-label">Low Engagement</span>
+            <div class="legend-gradient"></div>
+            <span class="legend-label">High Engagement</span>
+          </div>
+          <div class="stats">
+            <p id="bestTimeInfo"></p>
+          </div>
+        </div>
+      </div>
     </div>
 
+    <!-- CHANGED: Use local file instead of CDN -->
+    <script src="js/apexcharts.min.js"></script>
     <script src="js/popup.js"></script>
   </body>
 </html>

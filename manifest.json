@@ -1,10 +1,14 @@
 {
   "manifest_version": 3,
-  "name": "Reddit Extension 1152",
+  "name": "Best Time to Post - Reddit",
   "version": "1.0",
-  "description": "Shows the best day and hour to post on a subreddit",
-  "permissions": ["tabs", "activeTab"],
+  "description": "Analyze best times to post on Reddit",
+  "permissions": ["activeTab"],
+  "host_permissions": ["https://www.reddit.com/*"],
   "action": {
     "default_popup": "popup.html"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
   }
 }
